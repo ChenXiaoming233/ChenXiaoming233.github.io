@@ -1,0 +1,106 @@
+baseURL: "https://chenxiaoming233.github.io/"
+title: "ming"
+copyright: "© 2026 ming"
+theme: "PaperMod"
+
+locale: "zh-CN"
+defaultContentLanguage: "zh"
+hasCJKLanguage: true
+enableRobotsTXT: true
+enableEmoji: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+mainSections: ["posts"]
+
+pagination:
+  pagerSize: 8
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+menu:
+  main:
+    - name: "文章"
+      url: "/posts/"
+      weight: 10
+    - name: "归档"
+      url: "/archives/"
+      weight: 20
+    - name: "标签"
+      url: "/tags/"
+      weight: 30
+    - name: "关于"
+      url: "/about/"
+      weight: 40
+    - name: "搜索"
+      url: "/search/"
+      weight: 50
+
+params:
+  env: "production"
+  description: "ming 的个人博客，记录技术、产品与日常观察。"
+  author: "ming"
+  defaultTheme: "auto"
+  ShowReadingTime: true
+  ShowWordCount: false
+  ShowShareButtons: false
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowRssButtonInSectionTermList: true
+  ShowAllPagesInArchive: true
+  ShowPageNums: true
+  ShowToc: true
+  TocOpen: false
+
+  homeInfoParams:
+    Title: "把复杂的事，写清楚。"
+    Content: |
+      这里是 ming 的个人博客，记录技术、产品与日常观察。
+
+      从 [第一篇文章](/posts/hello-world/) 开始，或者查看 [归档](/archives/)。
+
+  socialIcons:
+    - name: "github"
+      title: "GitHub"
+      url: "https://github.com/ChenXiaoming233"
+
+  label:
+    text: "ming"
+    iconSVG: '<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 32 32" aria-hidden="true"><rect x="2" y="2" width="28" height="28" rx="8" fill="#b7472a"/><path d="M9 10h14M9 16h10M9 22h14" fill="none" stroke="#fff8ee" stroke-width="2.2" stroke-linecap="round"/></svg>'
+
+  assets:
+    favicon: "favicon.svg"
+    favicon16x16: "favicon.svg"
+    favicon32x32: "favicon.svg"
+    apple_touch_icon: "favicon.svg"
+    safari_pinned_tab: "favicon.svg"
+    theme_color: "#b7472a"
+    msapplication_TileColor: "#b7472a"
+    disableHLJS: true
+
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.35
+    minMatchCharLength: 1
+    keys: ["title", "permalink", "summary", "content"]
+
+  footer:
+    text: "用文字留下一点痕迹。"
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    noClasses: false
+
+minify:
+  disableXML: true
